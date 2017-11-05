@@ -21,7 +21,7 @@ class Main extends CI_Controller{
 
 	function search() {
 		$kw = $this->input->post('kw');
-		$this->load->model('product_model','product')
+		$this->load->model('product_model','product');
 		$data['query'] = $this->product->search($kw);
 		$this->load->view('main_view', $data);
 	}
